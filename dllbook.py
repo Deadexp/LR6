@@ -9,14 +9,6 @@ class Book:
     def __repr__(self) -> str:
         return f"Book(author='{self.author}', publisher='{self.publisher}', pages={self.pages}, price={self.price}, isbn='{self.isbn}')"
 
-
-class Node:
-    def __init__(self, data: Book = None):
-        self.data = data
-        self.prev = None
-        self.next = None
-
-
 class DoublyLinkedList:
     def __init__(self) -> None:
         self.head = None
