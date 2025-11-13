@@ -70,21 +70,3 @@ class DoublyLinkedList:
             current = current.next
         return min_node
 
-    def gnome_sort_by_author(self) -> None:
-        if self.head is None:
-            return
-        
-        current = self.head
-        while current and current.next:
-            if current.data.author <= current.next.data.author:
-                current = current.next
-            else:
-                # Корректный обмен данными
-                current.data, current.next.data = current.next.data, current.data
-                # Отступаем на шаг назад
-                if current.prev:
-                    current = current.prev
-                else:
-                    # Если мы в начале, остаемся на месте для следующей проверки
-                    current = self.head
-
